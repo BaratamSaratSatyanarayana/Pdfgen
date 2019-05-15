@@ -1,7 +1,5 @@
 
 <? php 
-session_start();
-?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="internassign.css">
@@ -33,8 +31,4 @@ return false;
 </div>
 </body>
 </html>
-<? php
-	$_SESSION["enname1"] = _POST["enname"];
-	$_SESSION["en_email_id1"] = _POST["en_email_id"];
-	echo "eee";
 ?>
