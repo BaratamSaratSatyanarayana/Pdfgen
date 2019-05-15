@@ -1,0 +1,40 @@
+
+<? php 
+session_start();
+?>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="internassign.css">
+<script>  
+
+function validate_email()  
+{  
+var x=document.form1.emailid.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+	 {  
+alert("Please enter a valid e-mail address);
+return false;
+	 }  
+
+}  
+</script>
+</head>
+<body>
+<div class="container" align="center" >
+<form name="form1" id="myForm"  method="POST" action="test_code.php" onsubmit="return validate_email()">
+<label>Name:</label>
+<input type="text" class="spaceclass elementclass" name="enname" placeholder="Enter your name" required><br>
+<label>Email:</label>
+<input type="email" class="spaceclass elementclass" placeholder="Enter your email id" name="en_email_id" required><br>
+<input type="submit">
+</form>
+</div>
+</body>
+</html>
+<? php
+	$_SESSION["enname1"] = _POST["enname"];
+	$_SESSION["en_email_id1"] = _POST["en_email_id"];
+	echo "eee";
+?>
